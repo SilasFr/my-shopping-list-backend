@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "axios": "^0.26.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
     "joi": "^17.6.0",
     "pg": "^8.7.3"
   },
