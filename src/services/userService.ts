@@ -71,9 +71,20 @@ async function find(user: PartialUser) {
   return token;
 }
 
+async function findByToken(token: string) {
+  const { userId } = await userRepository.findByToken(token);
+  if (!userId) {
+    throw 'Invalid token';
+  }
+
+  const user = await userRepository.findById(userId);
+  return user;
+}
+
 const userService = {
   create,
   find,
+  findByToken,
 };
 
 export default userService;

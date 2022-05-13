@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "lists" ALTER COLUMN "listId" SET DATA TYPE TEXT;

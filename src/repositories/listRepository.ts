@@ -23,6 +23,8 @@ export interface List {
   items: Item[];
 }
 
+async function getListsByUser() {}
+
 async function getTemplate() {
   const result = await db
     .collection('lists')
@@ -37,26 +39,13 @@ export async function generateTemplate() {
       'utf-8'
     )
   );
-  console.log('aaa');
   return await db.collection('lists').insertOne({ list });
 }
-
-const list: List = {
-  id: '',
-  frequency: '',
-  items: [
-    {
-      product: 'milk',
-      price: 0,
-      qty: 1,
-      category: 'groceries',
-    },
-  ],
-};
 
 const listRepository = {
   getTemplate,
   generateTemplate,
+  getListsByUser,
 };
 
 export default listRepository;
