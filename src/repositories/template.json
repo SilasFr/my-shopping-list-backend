@@ -1,0 +1,512 @@
+[
+  {
+    "product": "milk",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "eggs",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "butter",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "yogurt",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "cheese",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "cookies",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "brownies",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "orange juice",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "tea",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "coffee",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "beer",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "water",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "potatos",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "onions",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "garlic",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "tomatos",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "cocumber",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "pepper",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "carrot",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "apple",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "orange",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "grapes",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "pineapple",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "lemon",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "strawberry",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "bananas",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "spagetti",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "rice",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "noodle",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "beans",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "corn",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "peas",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "tuna",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "salmon",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "spagetti sauce",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "ketchup",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "mayonnaise",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "mustard",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "peanut butter",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "salt",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "honey",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "olive oil",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "salad dressing",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "steak sauce",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "olives",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "picles",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "chicken nuggets",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "frozen fruits",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "frozen pizza",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "waffle",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "pancakes",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "icecream",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "ice",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "steak",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "chicken",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "pork",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "bacon",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "hot dogs",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "sausage",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "ham",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "flour",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "sugar",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "vanilla extract",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "pudim",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "marshmalow",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "baking powder",
+    "price": 0,
+    "qty": 1,
+    "category": "groceries"
+  },
+  {
+    "product": "dish soap",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "oven cleaner",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "laundry detergent",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "bleach",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "stain remover",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "napkins",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "paper towel",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "toiled paper",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "plastic bag",
+    "price": 0,
+    "qty": 1,
+    "category": "cleaning"
+  },
+  {
+    "product": "hand sanitizer",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "toth paste",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "floss",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "shampoo",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "conditioner",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "deodorant",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "sunscreen",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "bandaids",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "shaving cream",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  },
+  {
+    "product": "q-tips",
+    "price": 0,
+    "qty": 1,
+    "category": "drugstore"
+  }
+]

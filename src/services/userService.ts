@@ -2,6 +2,8 @@ import { User } from '@prisma/client';
 import userRepository from '../repositories/useRepository.js';
 import bcrypt from 'bcrypt';
 import errorUtils from '../utils/errorUtils.js';
+import { Session } from '@prisma/client';
+import { v4 as uuid } from 'uuid';
 
 interface CreateUser {
   name: string;
@@ -12,6 +14,8 @@ interface CreateUser {
 export type PartialUser = Partial<User>;
 
 export type InsertUser = Omit<User, 'id'>;
+
+export type InsertSession = Omit<Session, 'id'>;
 
 async function create({ name, email, password }: CreateUser) {
   const provider = null;
@@ -28,10 +32,44 @@ async function create({ name, email, password }: CreateUser) {
     password: encryptedPassword,
     provider,
   };
+
   return await userRepository.create(user);
 }
 
-async function find(user: PartialUser) {}
+async function find(user: PartialUser) {
+  const { email, password } = user;
+  const existingUser = await verifyEmail();
+
+  verifyPassword();
+
+  const token = await generateSession();
+
+  async function generateSession() {
+    const token: string = uuid();
+    const userId = existingUser.id;
+
+    await userRepository.createSession({ token, userId });
+
+    return token;
+  }
+
+  function verifyPassword() {
+    const isPasswordValid = bcrypt.compareSync(password, existingUser.password);
+    if (!isPasswordValid) {
+      throw errorUtils.forbiden('Invalid password');
+    }
+  }
+
+  async function verifyEmail() {
+    const existingUser = await userRepository.findByEmail(email);
+    if (!existingUser) {
+      throw errorUtils.forbiden('User not registered');
+    }
+    return existingUser;
+  }
+
+  return token;
+}
 
 const userService = {
   create,
