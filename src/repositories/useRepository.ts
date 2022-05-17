@@ -21,12 +21,17 @@ async function findById(id: number) {
   return await prisma.user.findUnique({ where: { id } });
 }
 
+async function getSession(token: string) {
+  return await prisma.session.findUnique({ where: { token } });
+}
+
 const userRepository = {
   create,
   findByEmail,
   createSession,
   findByToken,
   findById,
+  getSession,
 };
 
 export default userRepository;

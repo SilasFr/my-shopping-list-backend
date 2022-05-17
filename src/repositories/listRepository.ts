@@ -1,6 +1,7 @@
 import { ObjectId } from 'mongodb';
 import { db } from '../database.js';
 import fs from 'fs';
+import prisma from '../database.js';
 
 export type Category =
   | 'pets'
@@ -23,12 +24,19 @@ export interface List {
   items: Item[];
 }
 
-async function getListsByUser() {}
+async function getListsIdByUser(userId: number) {
+  return prisma.list.findMany({ where: { userId } });
+}
+
+async function getListsById(listId: string) {
+  return await db.collection('lists').findOne({ _id: new ObjectId(listId) });
+}
 
 async function getTemplate() {
+  const templateId = '627de05b1d1b99d553ec3143';
   const result = await db
     .collection('lists')
-    .findOne({ _id: new ObjectId('627de05b1d1b99d553ec3143') });
+    .findOne({ _id: new ObjectId(templateId) });
   return result;
 }
 
@@ -45,7 +53,8 @@ export async function generateTemplate() {
 const listRepository = {
   getTemplate,
   generateTemplate,
-  getListsByUser,
+  getListsIdByUser,
+  getListsById,
 };
 
 export default listRepository;

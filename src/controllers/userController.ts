@@ -18,9 +18,17 @@ async function login(req: Request, res: Response) {
   res.status(200).send(token);
 }
 
+async function validateUser(req: Request, res: Response) {
+  const user = res.locals.user;
+  delete user.password;
+
+  res.status(200).send(user);
+}
+
 const userControler = {
   signup,
   login,
+  validateUser,
 };
 
 export default userControler;

@@ -4,7 +4,7 @@ import listService from '../services/listService.js';
 
 async function get(req: Request, res: Response) {
   const user: User = res.locals.user;
-  const result = await listService.find();
+  const result = await listService.find(user.id);
   res.status(200).send(result);
 }
 
