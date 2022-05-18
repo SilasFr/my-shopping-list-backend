@@ -1,15 +1,26 @@
-import listRepository from '../repositories/listRepository.js';
+import listRepository, { InsertList } from '../repositories/listRepository.js';
+import userRepository from '../repositories/useRepository.js';
 
 async function find(userId: number) {
   const usersLists = await listRepository.getListsIdByUser(userId);
-  const lists = await usersLists.map(async (list) => {
-    return await listRepository.getListsById(list.listId);
-  });
-  return lists;
+  let result = [];
+  for (let i = 0; i < usersLists.length; i++) {
+    const list = await getListsById(usersLists[i].listId);
+    console.log(list);
+    result.push(list);
+  }
+  return result;
 }
 
-async function create() {
-  return await listRepository.generateTemplate();
+async function getListsById(listId: string) {
+  return await listRepository.getListsById(listId);
+}
+
+async function create(list: InsertList, userId: number) {
+  const insertedId = await listRepository.create(list);
+
+  await listRepository.associateUser(userId, insertedId.toString());
+  return;
 }
 
 async function findTemplate() {

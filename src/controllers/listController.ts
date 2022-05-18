@@ -14,7 +14,10 @@ async function getTemplate(req: Request, res: Response) {
 }
 
 async function create(req: Request, res: Response) {
-  await listService.create();
+  const user = res.locals.user;
+  const list = req.body;
+  await listService.create(list, user.id);
+
   res.sendStatus(201);
 }
 

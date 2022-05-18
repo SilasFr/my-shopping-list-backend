@@ -24,6 +24,8 @@ export interface List {
   items: Item[];
 }
 
+export type InsertList = Omit<List, 'id'>;
+
 async function getListsIdByUser(userId: number) {
   return prisma.list.findMany({ where: { userId } });
 }
@@ -50,11 +52,22 @@ export async function generateTemplate() {
   return await db.collection('lists').insertOne({ list });
 }
 
+async function create(list: InsertList) {
+  const { insertedId } = await db.collection('lists').insertOne(list);
+  return insertedId;
+}
+
+async function associateUser(userId: number, listId: string) {
+  return await prisma.list.create({ data: { listId, userId } });
+}
+
 const listRepository = {
   getTemplate,
   generateTemplate,
   getListsIdByUser,
   getListsById,
+  create,
+  associateUser,
 };
 
 export default listRepository;
