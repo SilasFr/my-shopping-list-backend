@@ -5,7 +5,7 @@ const { PrismaClient } = pg;
 
 const prisma = new PrismaClient();
 
-const mongoClient = new MongoClient('mongodb://localhost:27017');
+const mongoClient = new MongoClient('mongodb://mongo:27017');
 export let db: Db;
 
 mongoClient.connect().then(() => {

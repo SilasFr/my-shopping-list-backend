@@ -37,6 +37,7 @@ async function deleteList(req: Request, res: Response) {
   if (!list) {
     throw errorUtils.notFound('List not found for this user');
   }
+
   await listService.remove(listId);
   res.sendStatus(204);
 }
