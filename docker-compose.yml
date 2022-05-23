@@ -1,0 +1,41 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - 2345:5432
+    env_file:
+      - .env
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - '27017-27019:27017-27019'
+    restart: always
+    volumes:
+      - ./init-mongo.js:/initdb.d/init-mongo.js:ro
+      - ./mongo-volume:/data/db
+
+  node_app:
+    container_name: node_app
+    build: . #Dockerfile do node se encontra na pasta atual
+    ports:
+      - 5000:5000
+    depends_on:
+      - postgres # só sobe quando o postgres tiver no ar
+      - mongo
+    env_file:
+      - .env #configurar DATABASE_URL
+    volumes:
+      - .:/usr/src
+      - /usr/src/node_modules
+    entrypoint: dockerize -wait tcp://postgres:5432 -timeout 20s docker-entrypoint.sh
+    command: 'npm run dev'
+
+volumes:
+  postgres:
+  mongo:

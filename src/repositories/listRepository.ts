@@ -35,7 +35,7 @@ async function getListsById(listId: string) {
 }
 
 async function getTemplate() {
-  const templateId = '627de05b1d1b99d553ec3143';
+  const templateId = '628b8b1dc45f4416a0faa5d3';
   const result = await db
     .collection('lists')
     .findOne({ _id: new ObjectId(templateId) });
@@ -43,13 +43,16 @@ async function getTemplate() {
 }
 
 export async function generateTemplate() {
-  const list = JSON.parse(
+  const listItems = JSON.parse(
     fs.readFileSync(
       '/home/silas/Projects_driven/projeto-autoral/my-shopping-list-backend/src/repositories/template.json',
       'utf-8'
     )
   );
-  return await db.collection('lists').insertOne({ list });
+  const frequency: string = 'monthly';
+  return await db
+    .collection('lists')
+    .insertOne({ frequency, items: listItems });
 }
 
 async function create(list: InsertList) {
@@ -61,12 +64,22 @@ async function associateUser(userId: number, listId: string) {
   return await prisma.list.create({ data: { listId, userId } });
 }
 
+async function deleteList(id: string) {
+  return await db.collection('lists').deleteOne({ _id: new ObjectId(id) });
+}
+
+async function desassociateUser(listId: string) {
+  return await prisma.list.delete({ where: { listId } });
+}
+
 const listRepository = {
   getTemplate,
   generateTemplate,
   getListsIdByUser,
   getListsById,
   create,
+  deleteList,
+  desassociateUser,
   associateUser,
 };
 

@@ -12,6 +12,7 @@ export function errorHandlerMiddleware(
   res: Response,
   next: NextFunction
 ) {
+  console.log(error);
   if (error.type === 'schema_error') {
     return res.status(400).send(error.message);
   }

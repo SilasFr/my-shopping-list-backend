@@ -14,5 +14,7 @@ listRouter.post(
 );
 listRouter.get('/lists', validateToken, listController.get);
 listRouter.get('/lists/template', validateToken, listController.getTemplate);
+listRouter.post('/lists/template', listController.createTemplate);
+listRouter.delete('/lists/:id', validateToken, listController.deleteList);
 
 export default listRouter;
